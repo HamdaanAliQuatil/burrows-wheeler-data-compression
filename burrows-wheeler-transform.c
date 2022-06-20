@@ -20,8 +20,8 @@ int* suffixArray(char* input_text, int length){
 
     qsort(suff, length, sizeof(rotation), sortRotation);
 
-    int* suffix_array
-        = (int*)malloc(length * sizeof(int));
+    int* suffix_array = (int*)malloc(length * sizeof(int));
+
     for (int i = 0; i < length; i++)
         suffix_array[i] = suff[i].index;
   
@@ -30,6 +30,7 @@ int* suffixArray(char* input_text, int length){
   
 char* findLastChar(char* input_text, int* suffix_array, int n){
     char* transformed_array= (char*)malloc(n * sizeof(char));
+    
     int i;
     for (i = 0; i < n; i++) {
         int j = suffix_array[i] - 1;
