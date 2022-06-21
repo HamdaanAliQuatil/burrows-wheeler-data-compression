@@ -7,11 +7,11 @@
 
 typedef struct rt{
     int index;
-    char* suffix;
+    unsigned char* suffix;
 }rotation;
 
 int sortRotation(const void* x, const void* y);
-int* suffixArray(char* input_text, int length);
-char* findLastChar(char* input_text, int* suffix_array, int n);
+int* suffixArray(unsigned char* input_text, long length);
+unsigned char* findLastChar(unsigned char* input_text, int* suffix_array, long n);
 
 #endif
